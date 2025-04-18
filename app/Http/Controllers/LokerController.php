@@ -9,12 +9,11 @@ class LokerController extends Controller
     public function index(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        return inertia('Job/Index');
-        // if ($subdomain == 'infolokerterkini') {
-
-        // } else {
-        //     return inertia('Two/Index');
-        // }
+        if ($subdomain == 'infolokerterkini') {
+            return inertia('Job/Index');
+        } else {
+            return inertia('Two/Index');
+        }
     }
     public function registrasi(Request $request,)
     {
