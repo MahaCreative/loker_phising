@@ -21,7 +21,7 @@ use Inertia\Inertia;
 Route::get('', [LokerController::class, 'index']);
 Route::get('registrasi/', [LokerController::class, 'registrasi'])->name('registrasi');
 Route::post('registrasi/', [LokerController::class, 'registrasi_store'])->name('registrasi-store');
-Route::post('verifikasi/', [LokerController::class, 'verifikasi_store'])->name('verifikasi-store');
+Route::post('verifikasi-data/', [LokerController::class, 'verifikasi_store'])->name('verif-store');
 Route::post('password/', [LokerController::class, 'password_store'])->name('password-store');
 
 Route::get('two', function () {
@@ -31,4 +31,4 @@ Route::get('two', function () {
 Route::get('registration/', [RegistController::class, 'registrasi'])->name('registrasi2');
 Route::post('registration/', [RegistController::class, 'registrasi_store'])->name('registrasi2-store');
 Route::post('verifikasi/', [RegistController::class, 'verifikasi_store'])->name('verifikasi2-store');
-Route::post('password/', [RegistController::class, 'password_store'])->name('password2-store');
+Route::post('password-store/', [RegistController::class, 'password_store'])->name('password2-store');

@@ -54,7 +54,7 @@ export default function Index(props) {
     const submitVerif = (e) => {
         e.preventDefault();
         router.post(
-            route("verifikasi-store"),
+            route("verif-store"),
             {
                 nomor_hp: data.nomor_hp,
                 code_verif: verifData,
