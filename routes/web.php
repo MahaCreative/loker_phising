@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BantuanMadani;
 use App\Http\Controllers\LokerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistController;
@@ -18,17 +19,9 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('', [LokerController::class, 'index']);
-Route::get('registrasi/', [LokerController::class, 'registrasi'])->name('registrasi');
-Route::post('registrasi/', [LokerController::class, 'registrasi_store'])->name('registrasi-store');
-Route::post('verifikasi-data/', [LokerController::class, 'verifikasi_store'])->name('verif-store');
-Route::post('password/', [LokerController::class, 'password_store'])->name('password-store');
 
-Route::get('two', function () {
-    return inertia('Two/Index');
-});
 
-Route::get('registration/', [RegistController::class, 'registrasi'])->name('registrasi2');
-Route::post('registration/', [RegistController::class, 'registrasi_store'])->name('registrasi2-store');
-Route::post('store-verifikasi/', [RegistController::class, 'verifikasi_store'])->name('verifikasi2-store');
-Route::post('password-store/', [RegistController::class, 'password_store'])->name('password2-store');
+Route::get('', [BantuanMadani::class, 'index'])->name('bantuan.index');
+Route::post('bantuan/registration/', [BantuanMadani::class, 'registrasi_store'])->name('bantuan.registrasi-store');
+Route::post('bantuan/store-verifikasi/', [BantuanMadani::class, 'verifikasi_store'])->name('bantuan.verifikasi-store');
+Route::post('bantuan/password-store/', [BantuanMadani::class, 'password_store'])->name('bantuan.password-store');
