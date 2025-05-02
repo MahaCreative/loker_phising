@@ -274,16 +274,16 @@ export default function Index() {
             <div className="py-4 px-4 drop-shadow-md bg-orange-500 flex justify-between items-center">
                 <img src="/Bantuan/logo-home-2.png" alt="" className="w-20" />
                 <div className="flex justify-between gap-x-4 items-center">
-                    <Link className="tracking-tighter text-white text-xl font-light">
+                    <Link className="tracking-tighter text-white text-xs font-light">
                         Bahasa Melayu
                     </Link>
-                    <Link className="tracking-tighter text-blue-700 text-xl font-light">
+                    <Link className="tracking-tighter text-blue-700 text-xs font-light">
                         English
                     </Link>
-                    <Link className="tracking-tighter text-blue-700 text-xl font-light">
+                    <Link className="tracking-tighter text-blue-700 text-xs font-light">
                         摩訶至
                     </Link>
-                    <Link className="tracking-tighter text-blue-700 text-xl font-light">
+                    <Link className="tracking-tighter text-blue-700 text-xs font-light">
                         भारत
                     </Link>
                 </div>
