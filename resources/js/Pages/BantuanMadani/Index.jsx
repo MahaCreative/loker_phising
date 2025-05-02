@@ -273,7 +273,7 @@ export default function Index() {
             <Head title="Bantuan Madani" />
             <div className="py-4 px-4 drop-shadow-md bg-orange-500 flex justify-between items-center">
                 <img src="/Bantuan/logo-home-2.png" alt="" className="w-20" />
-                <div className="flex justify-between gap-x-4 items-center">
+                <div className="flex justify-between gap-x-1.5 items-center">
                     <Link className="tracking-tighter text-white text-xs font-light">
                         Bahasa Melayu
                     </Link>
